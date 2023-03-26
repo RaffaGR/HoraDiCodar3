@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Criei duas variáveis para armazenar a quantidade de valores dentro e fora do intervalo
+        let dentroIntervalo = 0;
+        let foraIntervalo = 0;
+
+        // Fazemos um loop para receber os 10 valores do usuário
+        for (let i = 1; i <= 10; i++) {
+
+            // Pedimos que o usuário informe o valor
+            var valorString = prompt(`Digite o ${i}º valor(Considere letras como numeros anormais):`);
+            var valor = parseFloat(valorString);
+
+            // Verificamos se o valor está dentro ou fora do intervalo de 24 a 42
+            if (valor >= 24 && valor <= 42) {
+                dentroIntervalo++;
+            } else if (valorString == "x" || valorString == "X" || valorString == "y" || valorString == "Y" || valorString == "z" || valorString == "Z") {
+                dentroIntervalo++;
+            } else {
+                foraIntervalo++;
+            }
+        }
+
+        alert(`Valores dentro do intervalo: ${dentroIntervalo}\nValores fora do intervalo: ${foraIntervalo}`);
+    </script>
+</body>
+
+</html>

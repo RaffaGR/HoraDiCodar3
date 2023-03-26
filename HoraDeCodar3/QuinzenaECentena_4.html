@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Possibility A - !!! COrrective
+        var numerosA = [];
+
+        for (var i = 15; i <= 100; i++) {
+            numerosA.push(i);
+        }
+        var soma = 0;
+        for (var i = 0; i < numerosA.length; i++) {
+            soma += numerosA[i];
+        }
+        alert("A Média dos numerosA 15 até o 85 é igual a " + soma / numerosA.length);
+
+
+        // Possibility BC
+        /* B */
+        var numerosB = [];
+
+        for (var i = 0; i <= 15; i++) {
+            numerosB.push(i);
+        }
+        var soma = 0;
+        for (var i = 0; i < numerosB.length; i++) {
+            soma += numerosB[i];
+        }
+        alert("A Média dos numerosB 0 até o 15 é igual a " + soma / numerosB.length);
+
+
+
+        /* C */
+        var numerosC = [];
+
+        for (var i = 0; i <= 100; i++) {
+            numerosC.push(i);
+        }
+        var soma2 = 0;
+        for (var i = 0; i < numerosC.length; i++) {
+            soma2 += numerosC[i];
+        }
+        alert("A Média dos numerosC 0 até o 100 é igual a " + soma2 / numerosC.length);
+        alert("A soma das média do 0 a 15 e 0 a 100 é igual a " + (soma / numerosB.length + soma2 / numerosC.length) + "\nSim! É um absurdo")
+    </script>
+</body>
+
+</html>

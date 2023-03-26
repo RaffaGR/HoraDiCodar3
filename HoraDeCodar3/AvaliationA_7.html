@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nA1, nA2, nA3, nA4, nA5, nA6;
+        function obterNotasA1(){
+            let nA = parseFloat(prompt("Bem vindo!\nPor favor, digite as 6 notas das avaliações do aluno\nAvaliação 1(0 a 10);"))
+            if (nA >= 0 && nA <= 10) {
+                nA1 = nA;
+                return obterNotasA2();
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA1();
+            };
+        };
+        console.log(nA1)
+        function obterNotasA2(){
+            let nA = parseFloat(prompt("Avaliação 2(0 a 10);"));
+            if (nA >= 0 && nA <= 10) {
+                nA2 = nA;
+                return obterNotasA3();
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA2();
+            };
+        };
+        function obterNotasA3(){
+            let nA = parseFloat(prompt("Avaliação 3(0 a 10);"));
+            if (nA >= 0 && nA <= 10) {
+                nA3 = nA;
+                return obterNotasA4();
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA3();
+            };
+        };
+        function obterNotasA4(){
+            let nA = parseFloat(prompt("Avaliação 4(0 a 10);"));
+            if (nA >= 0 && nA <= 10) {
+                nA4 = nA;
+                return obterNotasA5();
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA4();
+            };
+        };
+        function obterNotasA5(){
+            let nA = parseFloat(prompt("Avaliação 5(0 a 10);"));
+            if (nA >= 0 && nA <= 10) {
+                nA5 = nA;
+                return obterNotasA6();
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA5();
+            };
+        };
+        function obterNotasA6(){
+            let nA = parseFloat(prompt("Avaliação 6(0 a 10);"));
+            if (nA >= 0 && nA <= 10) {
+                return nA6 = nA;
+            } else {
+                alert("Algum erro ocorreu, tente novamente.");
+                obterNotasA6();
+            };
+        };
+        obterNotasA1();
+        var mediaA = (nA1 + nA2 + nA3 + nA4 + nA5 + nA6) / 6;
+        alert(mediaA.toFixed(2));
+    </script>
+</body>
+</html>

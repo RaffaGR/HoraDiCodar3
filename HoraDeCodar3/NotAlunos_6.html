@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var alunosA = []
+        var alunosR = []
+        var nA = 0;
+        var nR = 0;
+        function notaAluno() {
+            let p1 = parseFloat(prompt("Digite a nota da Prova A do aluno:"));
+            let p2 = parseFloat(prompt("Digite a nota da Prova B do aluno:"));
+            let media = (p1 + p2) / 2;
+            if (media >= 9.5) {
+                nA++
+                alunosA.push(nA);
+                calcOut();
+            } else if (media < 9.5 && media > 0) {
+                nR++
+                alunosR.push(nR);
+                calcOut();
+            } else {
+                alert("Ops... Algum erro cometido! Tente novmente");
+                notaAluno();
+            }
+        }
+
+        function calcOut() {
+            let deseja = prompt("Deseja calcular a média de outro aluno Sim/Não?");
+            if (deseja == "Sim" || deseja == "S" || deseja == "sim" || deseja == "s") {
+                notaAluno();
+            } else if (deseja == "Não" || deseja == "N" || deseja == "nao" || deseja == "não" || deseja == "Nao" || deseja == "n") {
+                var totalAlunos = alunosA.length + alunosR.length;
+                if (alunosA.length > 1) {
+                    alert(`De ${totalAlunos} alunos, ${alunosA.length} foram Aprovados!`)
+                } else {
+                    alert(`De ${totalAlunos} alunos, ${alunosA.length} foi Aprovado`)
+                }
+            } else {
+                alert("Algum erro ocorreu... Tente novamente -_-'")
+                calcOut();
+            }
+        }
+
+        notaAluno();
+    </script>
+</body>
+
+</html>

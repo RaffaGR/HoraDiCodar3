@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomba relogio</title>
+</head>
+
+<body>
+    <div id="seg" style=" justify-content: center;">
+
+    </div>
+    <script>
+        var seg = document.querySelector("#seg");
+        seg.style.display = "flex";
+        seg.style.justifyContent = "center;";
+
+        function tempo(i) {
+            if (i >= 0) {
+                seg.innerHTML = `Tempo até a explosão: ${i}!`;
+                setTimeout(function () {
+                    tempo(i - 1);
+                }, 1000);
+            } else {
+                seg.innerHTML = `Explosion!`;
+            }
+        }
+        tempo(30);
+    </script>
+</body>
+
+</html>

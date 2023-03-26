@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var pri;
+        var sec;
+
+        function pegarValor() {
+            sec = parseInt(prompt("Digite numero base.(Inteiro)"));
+            pri = parseInt(prompt("Digite o numero a ser somado de forma que ele sempre seja superior ao numero base, se não fizer, fazemos isso por voce.(Inteiro)"));
+            if (pri <= sec) {
+                maximizar();
+            }
+        };
+
+        function maximizar() {
+            let resto = sec - pri;
+            pri += resto + 1;
+        }
+
+        function calculaMedia(elemento) {
+            mediaDele = elemento / 2;
+            return mediaDele;
+        }
+
+        function resultado() {
+            pegarValor();
+            if (sec <= pri) {
+                mP = pri / 2;
+                mS = sec / 2;
+
+                var numeros = [];
+                for (var i = sec; i <= pri; i++) {
+                    numeros.push(i);
+                }
+
+                console.log(numeros); // antes
+
+                numeros.forEach((el, ind) => {
+                    numeros[ind] = el / 2;
+                    if (ind < numeros.length - 1) {
+                        numeros[ind] += " - ";
+                    } else {
+                        numeros[ind] += ".";
+                    }
+                });
+
+                console.log(numeros); // depois
+
+                alert(`Média do numero base(${sec}) = ${mP}\nMédia do segundo numero(${pri}) = ${mS}\nMédia dos numeros entre eles = ${numeros.join(" ")}`);
+            } else {
+                console.log(pri + " - " + sec)
+                alert("Ocorreu algum erro!");
+            }
+        };
+
+        resultado();
+    </script>
+</body>
+
+</html>
